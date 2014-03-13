@@ -79,7 +79,7 @@ module.exports = function setupRule(ruleName, options) {
                                 typeName +
                                 ' literals should ' +
                                 (disallowComma ? 'not ' : '') +
-                                'have a comma after the last value',
+                                'have a trailing comma',
                             lastTokenBeforeClosingBrace.loc[pointToTokenStart ? 'start' : 'end']);
                     }
                 });
