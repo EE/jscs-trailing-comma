@@ -1,4 +1,4 @@
-# jscs-trailing-comma
+# jscs-trailing-comma [![Build Status](https://travis-ci.org/EE/jscs-trailing-comma.png?branch=master)](https://travis-ci.org/EE/jscs-trailing-comma)
 
 > JSCS rules around trailing commas in object/array literals.
 
