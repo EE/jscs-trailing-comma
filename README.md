@@ -4,6 +4,14 @@
 
 ## Getting Started
 
+To install the module, invoke:
+
+```bash
+npm install jscs-trailing-comma --save-dev
+```
+
+## Rationale
+
 In ECMAScript 5.1 trailing commas are allowed in object/array literals. Putting trailing commas is sometimes
 a desired pattern since it makes it possible to add new entries to the end (or remove from them) without touching
 the preceding line. It makes Git diffs prettier as you don't touch unrelated parts of code.
