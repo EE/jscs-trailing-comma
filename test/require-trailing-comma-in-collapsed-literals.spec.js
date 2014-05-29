@@ -10,6 +10,20 @@ describe('rules/require-trailing-comma-in-collapsed-literals', function () {
         checkerContainer.checker.registerRule(new (require('../rules/require-trailing-comma-in-collapsed-literals'))());
     });
 
+    describe('true', function () {
+        beforeEach(function () {
+            checkerContainer.checker.configure({
+                requireTrailingCommaInCollapsedLiterals: true,
+            });
+        });
+
+        testPatterns.expandedArray(checkerContainer, 'not require');
+        testPatterns.collapsedArray(checkerContainer, 'require');
+
+        testPatterns.expandedObject(checkerContainer, 'not require');
+        testPatterns.collapsedObject(checkerContainer, 'require');
+    });
+
     describe('inArrays', function () {
         beforeEach(function () {
             checkerContainer.checker.configure({

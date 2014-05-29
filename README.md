@@ -60,9 +60,9 @@ Arrays are treated in a similar way.
 
 Requires a trailing comma in expanded literals.
 
-Type: `Object`
+Type: `Boolean|Object`
 
-Values: `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
+Values: `true` or an object with `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
 
 #### Example
 ```js
@@ -100,9 +100,9 @@ var o2 = [
 
 Requires a trailing comma in collapsed literals.
 
-Type: `Object`
+Type: `Boolean|Object`
 
-Values: `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
+Values: `true` or an object with `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
 
 #### Example
 ```js
@@ -140,9 +140,9 @@ var o2 = ["value"];
 
 Disallows a trailing comma in expanded literals.
 
-Type: `Object`
+Type: `Boolean|Object`
 
-Values: `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
+Values: `true` or an object with `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
 
 #### Example
 ```js
@@ -180,9 +180,9 @@ var o2 = [
 
 Disallows a trailing comma in collapsed literals.
 
-Type: `Object`
+Type: `Boolean|Object`
 
-Values: `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
+Values: `true` or an object with `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
 
 #### Example
 ```js

@@ -19,7 +19,15 @@ module.exports = function setupRule(ruleName, options) {
     rule.prototype = {
 
         configure: function (options) {
-            assert(typeof options === 'object', ruleName + ' option requires object value');
+            if (typeof options === 'boolean') {
+                assert(
+                    options === true,
+                    ruleName + ' option requires object or true value; otherwise it should be removed'
+                );
+                options = {inArrays: true, inObjects: true};
+            }
+
+            assert(typeof options === 'object', ruleName + ' option requires object or true value');
 
             if ('inArrays' in options) {
                 assert(

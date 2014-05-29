@@ -11,6 +11,20 @@ describe('rules/disallow-trailing-comma-in-collapsed-literals', function () {
             new (require('../rules/disallow-trailing-comma-in-collapsed-literals'))());
     });
 
+    describe('true', function () {
+        beforeEach(function () {
+            checkerContainer.checker.configure({
+                disallowTrailingCommaInCollapsedLiterals: true,
+            });
+        });
+
+        testPatterns.expandedArray(checkerContainer, 'not disallow');
+        testPatterns.collapsedArray(checkerContainer, 'disallow');
+
+        testPatterns.expandedObject(checkerContainer, 'not disallow');
+        testPatterns.collapsedObject(checkerContainer, 'disallow');
+    });
+
     describe('inArrays', function () {
         beforeEach(function () {
             checkerContainer.checker.configure({

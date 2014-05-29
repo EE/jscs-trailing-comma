@@ -10,6 +10,20 @@ describe('rules/require-trailing-comma-in-expanded-literals', function () {
         checkerContainer.checker.registerRule(new (require('../rules/require-trailing-comma-in-expanded-literals'))());
     });
 
+    describe('true', function () {
+        beforeEach(function () {
+            checkerContainer.checker.configure({
+                requireTrailingCommaInExpandedLiterals: true,
+            });
+        });
+
+        testPatterns.expandedArray(checkerContainer, 'require');
+        testPatterns.collapsedArray(checkerContainer, 'not require');
+
+        testPatterns.expandedObject(checkerContainer, 'require');
+        testPatterns.collapsedObject(checkerContainer, 'not require');
+    });
+
     describe('inArrays', function () {
         beforeEach(function () {
             checkerContainer.checker.configure({
