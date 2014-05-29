@@ -40,5 +40,7 @@ describe('rules/disallow-trailing-comma-in-expanded-literals', function () {
 
         testPatterns.expandedObject(checkerContainer, 'disallow');
         testPatterns.collapsedObject(checkerContainer, 'not disallow');
+
+        testPatterns.sanityTests(checkerContainer);
     });
 });

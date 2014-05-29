@@ -31,7 +31,7 @@ module.exports = {
             assert(c.checker.checkString('var a = {\na:2,\nb:"b"\n\n}').getErrorCount() === +(mode === 'require'));
         });
     },
-    collapsedObject: function collapsedSingleLineObject(c, mode) {
+    collapsedObject: function collapsedObject(c, mode) {
         it('should ' + mode + ' a trailing comma in single-line object definition', function () {
             assert(c.checker.checkString('var a = {a:2,b:"b",}').getErrorCount() === +(mode === 'disallow'));
             assert(c.checker.checkString('var a = {a:2,b:"b"}').getErrorCount() === +(mode === 'require'));
@@ -40,6 +40,17 @@ module.exports = {
             'the closing bracket isn\'t alone in its line', function () {
             assert(c.checker.checkString('var a = {a:2,\nb:"b",}').getErrorCount() === +(mode === 'disallow'));
             assert(c.checker.checkString('var a = {a:2,\nb:"b"}').getErrorCount() === +(mode === 'require'));
+        });
+    },
+
+    sanityTests: function sanityTests(c) {
+        it('should not require a trailing comma in an empty array definition', function () {
+            assert(c.checker.checkString('var a = [\n]').getErrorCount() === 0);
+            assert(c.checker.checkString('var a = []').getErrorCount() === 0);
+        });
+        it('should not require a trailing comma in an empty object definition', function () {
+            assert(c.checker.checkString('var a = {\n}').getErrorCount() === 0);
+            assert(c.checker.checkString('var a = {}').getErrorCount() === 0);
         });
     },
 };

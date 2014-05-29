@@ -41,5 +41,7 @@ describe('rules/disallow-trailing-comma-in-collapsed-literals', function () {
 
         testPatterns.expandedObject(checkerContainer, 'not disallow');
         testPatterns.collapsedObject(checkerContainer, 'disallow');
+
+        testPatterns.sanityTests(checkerContainer);
     });
 });

@@ -60,9 +60,15 @@ module.exports = function setupRule(ruleName, options) {
                 file.iterateNodesByType(type, function (node) {
                     var lastTokenBeforeClosingBrace,
                         tokens = file.getTokens(),
+                        openingBracketPos = file.getTokenPosByRangeStart(node.range[0]),
                         closingBracketPos = file.getTokenPosByRangeStart(node.range[1] - 1),
                         closingBracket = tokens[closingBracketPos],
                         prevToken = tokens[closingBracketPos - 1];
+
+                    if (openingBracketPos + 1 === closingBracketPos) {
+                        // Empty object/array definition, no commas required.
+                        return;
+                    }
 
                     // If the closing bracket is alone in its line this is a expanded case.
                     // If we're not in the case we're testing, this is the end for us.
@@ -75,7 +81,7 @@ module.exports = function setupRule(ruleName, options) {
                     if ((requireComma && lastTokenBeforeClosingBrace.value !== ',') ||
                         (disallowComma && lastTokenBeforeClosingBrace.value === ',')) {
                         errors.add(
-                            (collapsed ? 'Collapsed ' : 'Expanded ') +
+                                (collapsed ? 'Collapsed ' : 'Expanded ') +
                                 typeName +
                                 ' literals should ' +
                                 (disallowComma ? 'not ' : '') +

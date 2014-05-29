@@ -40,5 +40,7 @@ describe('rules/require-trailing-comma-in-collapsed-literals', function () {
 
         testPatterns.expandedObject(checkerContainer, 'not require');
         testPatterns.collapsedObject(checkerContainer, 'require');
+
+        testPatterns.sanityTests(checkerContainer);
     });
 });

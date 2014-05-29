@@ -40,5 +40,7 @@ describe('rules/require-trailing-comma-in-expanded-literals', function () {
 
         testPatterns.expandedObject(checkerContainer, 'require');
         testPatterns.collapsedObject(checkerContainer, 'not require');
+
+        testPatterns.sanityTests(checkerContainer);
     });
 });
