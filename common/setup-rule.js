@@ -81,7 +81,7 @@ module.exports = function setupRule(ruleName, options) {
                     if ((requireComma && lastTokenBeforeClosingBrace.value !== ',') ||
                         (disallowComma && lastTokenBeforeClosingBrace.value === ',')) {
                         errors.add(
-                                (collapsed ? 'Collapsed ' : 'Expanded ') +
+                            (collapsed ? 'Collapsed ' : 'Expanded ') +
                                 typeName +
                                 ' literals should ' +
                                 (disallowComma ? 'not ' : '') +
