@@ -12,9 +12,12 @@ npm install jscs-trailing-comma --save-dev
 
 ## Rationale
 
-In ECMAScript 5.1 trailing commas are allowed in object/array literals. Putting trailing commas is sometimes
-a desired pattern since it makes it possible to add new entries to the end (or remove from them) without touching
-the preceding line. It makes Git diffs prettier as you don't touch unrelated parts of code.
+This set of rules checks for trailing commas in object/array literals and either enforces them or disallows them
+to have a consistend code style.
+
+Note: In ECMAScript 5.1 trailing commas are allowed in object/array literals. Putting trailing commas is sometimes
+a desired pattern since it makes it possible to add new entries to the end (or remove from it) of the object/array
+literal without touching the preceding line. It makes Git diffs prettier as you don't touch unrelated parts of code.
 
 This module defines 4 tasks to be passed to JSCS. See the [JSCS](npmjs.org/package/jscs) documentation for further
 information about working with JSCS and its rules.
