@@ -96,46 +96,6 @@ var o2 = [
 };
 ```
 
-### requireTrailingCommaInCollapsedLiterals
-
-Requires a trailing comma in collapsed literals.
-
-Type: `Boolean|Object`
-
-Values: `true` or an object with `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
-
-#### Example
-```js
-"requireTrailingCommaInCollapsedLiterals": {
-    "inArrays": true,
-    "inObjects": true
-}
-```
-
-##### Valid
-```js
-var o1 = {
-    key: "value",
-};
-var o2 = {
-    key: "value"
-};
-var o3 = {key: "value",};
-var o4 = [
-    "value",
-};
-var o5 = [
-    "value"
-};
-var o6 = ["value",];
-```
-
-##### Invalid
-```js
-var o1 = {key: "value"};
-var o2 = ["value"];
-```
-
 ### disallowTrailingCommaInExpandedLiterals
 
 Disallows a trailing comma in expanded literals.
@@ -174,6 +134,46 @@ var o1 = {
 var o2 = [
     "value",
 };
+```
+
+### requireTrailingCommaInCollapsedLiterals
+
+Requires a trailing comma in collapsed literals.
+
+Type: `Boolean|Object`
+
+Values: `true` or an object with `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
+
+#### Example
+```js
+"requireTrailingCommaInCollapsedLiterals": {
+    "inArrays": true,
+    "inObjects": true
+}
+```
+
+##### Valid
+```js
+var o1 = {
+    key: "value",
+};
+var o2 = {
+    key: "value"
+};
+var o3 = {key: "value",};
+var o4 = [
+    "value",
+};
+var o5 = [
+    "value"
+};
+var o6 = ["value",];
+```
+
+##### Invalid
+```js
+var o1 = {key: "value"};
+var o2 = ["value"];
 ```
 
 ### disallowTrailingCommaInCollapsedLiterals
