@@ -56,6 +56,86 @@ var o = {key1: "value1", key2: "value2", key3: "value3",
 
 Arrays are treated in a similar way.
 
+### requireTrailingComma
+
+Requires a trailing comma.
+
+Type: `Boolean|Object`
+
+Values: `true` or an object with `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
+
+#### Example
+```js
+"requireTrailingComma": {
+    "inArrays": true,
+    "inObjects": true
+}
+```
+
+##### Valid
+```js
+var o1 = {
+    key: "value",
+};
+var o2 = {key: "value",};
+var o3 = [
+    "value",
+};
+var o4 = ["value",];
+```
+
+##### Invalid
+```js
+var o1 = {
+    key: "value"
+};
+var o2 = {key: "value"};
+var o3 = [
+    "value"
+};
+var o4 = ["value"];
+```
+
+### disallowTrailingComma
+
+Disallows a trailing comma.
+
+Type: `Boolean|Object`
+
+Values: `true` or an object with `inArrays` and `inObjects` as child properties. Child properties must be set to `true`.
+
+#### Example
+```js
+"disallowTrailingComma": {
+    "inArrays": true,
+    "inObjects": true
+}
+```
+
+##### Valid
+```js
+var o1 = {
+    key: "value"
+};
+var o2 = {key: "value"};
+var o3 = [
+    "value"
+};
+var o4 = ["value"];
+```
+
+##### Invalid
+```js
+var o1 = {
+    key: "value",
+};
+var o2 = {key: "value",};
+var o3 = [
+    "value",
+};
+var o4 = ["value",];
+```
+
 ### requireTrailingCommaInExpandedLiterals
 
 Requires a trailing comma in expanded literals.

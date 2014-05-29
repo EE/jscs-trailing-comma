@@ -4,7 +4,8 @@ var assert = require('assert');
 
 module.exports = function setupRule(ruleName, options) {
     // Are we defining a rule for an expanded or a collapsed case?
-    var collapsed = !!options.collapsed,
+    // If `collapsed` not provided, the rule encompasses both.
+    var collapsed = options.collapsed,
     // Require or disallow?
         requireComma = !!options.requireComma,
         disallowComma = !requireComma,
@@ -65,6 +66,9 @@ module.exports = function setupRule(ruleName, options) {
             }
 
             function checkType(type, typeName) {
+                var typeNameTitle = typeName.replace(/^./, function (firstLetter) {
+                    return firstLetter.toUpperCase();
+                });
                 file.iterateNodesByType(type, function (node) {
                     var lastTokenBeforeClosingBrace,
                         tokens = file.getTokens(),
@@ -80,7 +84,8 @@ module.exports = function setupRule(ruleName, options) {
 
                     // If the closing bracket is alone in its line this is a expanded case.
                     // If we're not in the case we're testing, this is the end for us.
-                    if (collapsed !== (prevToken.loc.start.line === closingBracket.loc.start.line)) {
+                    if (collapsed != null &&
+                        collapsed !== (prevToken.loc.start.line === closingBracket.loc.start.line)) {
                         return;
                     }
 
@@ -89,8 +94,8 @@ module.exports = function setupRule(ruleName, options) {
                     if ((requireComma && lastTokenBeforeClosingBrace.value !== ',') ||
                         (disallowComma && lastTokenBeforeClosingBrace.value === ',')) {
                         errors.add(
-                            (collapsed ? 'Collapsed ' : 'Expanded ') +
-                                typeName +
+                            (collapsed == null ? typeNameTitle :
+                                (collapsed ? 'Collapsed ' : 'Expanded ') + typeName) +
                                 ' literals should ' +
                                 (disallowComma ? 'not ' : '') +
                                 'have a trailing comma',
