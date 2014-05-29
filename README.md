@@ -12,15 +12,11 @@ npm install jscs-trailing-comma --save-dev
 
 ## Rationale
 
-This set of rules checks for trailing commas in object/array literals and either enforces them or disallows them
-to have a consistend code style.
+This set of rules checks for trailing commas in object/array literals and either enforces them or disallows them to have a consistend code style.
 
-Note: In ECMAScript 5.1 trailing commas are allowed in object/array literals. Putting trailing commas is sometimes
-a desired pattern since it makes it possible to add new entries to the end (or remove from it) of the object/array
-literal without touching the preceding line. It makes Git diffs prettier as you don't touch unrelated parts of code.
+Note: In ECMAScript 5.1 trailing commas are allowed in object/array literals. Putting trailing commas is sometimes a desired pattern since it makes it possible to add new entries to the end (or remove from it) of the object/array literal without touching the preceding line. It makes Git diffs prettier as you don't touch unrelated parts of code.
 
-This module defines 4 tasks to be passed to JSCS. See the [JSCS](npmjs.org/package/jscs) documentation for further
-information about working with JSCS and its rules.
+This module defines 4 tasks to be passed to JSCS. See the [JSCS](npmjs.org/package/jscs) documentation for further information about working with JSCS and its rules.
 
 ## Rules
 
@@ -30,10 +26,7 @@ To be able to use rules from this module, add the following to your JSCS configu
 "additionalRules": ["node_modules/jscs-trailing-comma/rules/*.js"]
 ```
 
-Rules from this module work on a distinction between expanded and collapsed literals. Expanded literals are multi-line,
-with closing brackets in a separate line. Collapsed literal are either single-line or multi-line but without closing
-brackets in a separate line. You can think of collapsed literals as single-line with optional line breaks when the line
-is too long. They're more similar to single-line literals than expanded literals.
+Rules from this module work on a distinction between expanded and collapsed literals. Expanded literals are multi-line, with closing brackets in a separate line. Collapsed literal are either single-line or multi-line but without closing brackets in a separate line. You can think of collapsed literals as single-line with optional line breaks when the line is too long. They're more similar to single-line literals than expanded literals.
 
 Examples could make the distinction clearer.
 
