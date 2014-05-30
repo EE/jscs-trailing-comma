@@ -10,7 +10,7 @@ describe('rules/disallow-trailing-comma', function () {
         checkerContainer.checker.registerRule(new (require('../rules/disallow-trailing-comma'))());
     });
 
-    describe('true', function () {
+    describe('rule set to `true`', function () {
         beforeEach(function () {
             checkerContainer.checker.configure({
                 disallowTrailingComma: true,

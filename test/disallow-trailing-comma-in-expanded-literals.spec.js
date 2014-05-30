@@ -10,7 +10,7 @@ describe('rules/disallow-trailing-comma-in-expanded-literals', function () {
         checkerContainer.checker.registerRule(new (require('../rules/disallow-trailing-comma-in-expanded-literals'))());
     });
 
-    describe('true', function () {
+    describe('rule set to `true`', function () {
         beforeEach(function () {
             checkerContainer.checker.configure({
                 disallowTrailingCommaInExpandedLiterals: true,

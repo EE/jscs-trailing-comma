@@ -11,7 +11,7 @@ describe('rules/disallow-trailing-comma-in-collapsed-literals', function () {
             new (require('../rules/disallow-trailing-comma-in-collapsed-literals'))());
     });
 
-    describe('true', function () {
+    describe('rule set to `true`', function () {
         beforeEach(function () {
             checkerContainer.checker.configure({
                 disallowTrailingCommaInCollapsedLiterals: true,
