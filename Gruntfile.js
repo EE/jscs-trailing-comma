@@ -11,22 +11,23 @@
 module.exports = function (grunt) {
     // Project configuration.
     grunt.initConfig({
-        jshint: {
-            options: {
-                jshintrc: true,
-            },
+        eslint: {
             all: {
                 src: [
                     'Gruntfile.js',
-                    'rules/**/*.js',
-                    'test/**/*.js',
+                    'rules',
+                    'test',
                 ],
             },
         },
 
         jscs: {
             all: {
-                src: '<%= jshint.all.src %>',
+                src: [
+                    'Gruntfile.js',
+                    'rules/**/*.js',
+                    'test/**/*.js',
+                ],
                 options: {
                     config: '.jscs.json',
                 },
@@ -50,12 +51,16 @@ module.exports = function (grunt) {
     // Load all grunt rules matching the `grunt-*` pattern.
     require('load-grunt-tasks')(grunt);
 
+    grunt.registerTask('lint', [
+        'eslint',
+        'jscs',
+    ]);
+
     grunt.registerTask('test', ['mochaTest']);
 
     // By default, lint and run all tests.
     grunt.registerTask('default', [
-        'jshint',
-        'jscs',
+        'lint',
         'test',
     ]);
 };
