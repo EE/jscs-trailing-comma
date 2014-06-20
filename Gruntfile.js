@@ -9,7 +9,8 @@
 'use strict';
 
 module.exports = function (grunt) {
-    // Project configuration.
+    require('time-grunt')(grunt);
+
     grunt.initConfig({
         eslint: {
             all: {
