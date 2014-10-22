@@ -1,48 +1,48 @@
 {
-    "name": "jscs-trailing-comma",
-    "version": "0.3.1-pre",
-    "description": "JSCS rules around trailing commas in object/array literals",
-    "homepage": "https://github.com/EE/jscs-trailing-comma",
-    "author": {
-        "name": "Michał Gołębiowski",
-        "email": "m.goleb@gmail.com"
-    },
-    "keywords": [
-        "jscs",
-        "lint",
-        "code style",
-        "style"
-    ],
-    "files": [
-        "rules",
-        "common"
-    ],
-    "main": "Gruntfile.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/EE/jscs-trailing-comma.git"
-    },
-    "bugs": "https://github.com/EE/jscs-trailing-comma/issues",
-    "licenses": [
-        {
-            "type": "MIT"
-        }
-    ],
-    "devDependencies": {
-        "grunt": "0.4.5",
-        "grunt-cli": "0.1.13",
-        "grunt-contrib-clean": "0.5.0",
-        "grunt-eslint": "0.5.0",
-        "grunt-jscs": "0.6.1",
-        "grunt-mocha-test": "0.11.0",
-        "jscs": "1.5.7",
-        "load-grunt-tasks": "0.6.0",
-        "time-grunt": "0.3.2"
-    },
-    "scripts": {
-        "test": "grunt"
-    },
-    "engines": {
-        "node": ">= 0.10.0"
+  "name": "jscs-trailing-comma",
+  "version": "0.3.1-pre",
+  "description": "JSCS rules around trailing commas in object/array literals",
+  "homepage": "https://github.com/EE/jscs-trailing-comma",
+  "author": {
+    "name": "Michał Gołębiowski",
+    "email": "m.goleb@gmail.com"
+  },
+  "keywords": [
+    "jscs",
+    "lint",
+    "code style",
+    "style"
+  ],
+  "files": [
+    "rules",
+    "common"
+  ],
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EE/jscs-trailing-comma.git"
+  },
+  "bugs": "https://github.com/EE/jscs-trailing-comma/issues",
+  "licenses": [
+    {
+      "type": "MIT"
     }
+  ],
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-cli": "0.1.13",
+    "grunt-contrib-clean": "0.5.0",
+    "grunt-eslint": "0.5.0",
+    "grunt-jscs": "0.6.1",
+    "grunt-mocha-test": "0.11.0",
+    "jscs": "1.5.7",
+    "load-grunt-tasks": "0.6.0",
+    "time-grunt": "0.3.2"
+  },
+  "scripts": {
+    "test": "grunt"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  }
 }
