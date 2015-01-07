@@ -23,11 +23,7 @@
     "url": "https://github.com/EE/jscs-trailing-comma.git"
   },
   "bugs": "https://github.com/EE/jscs-trailing-comma/issues",
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ],
+  "license": "MIT",
   "devDependencies": {
     "grunt": "0.4.5",
     "grunt-cli": "0.1.13",
