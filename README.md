@@ -5,6 +5,27 @@
 [![Build Status](https://travis-ci.org/EE/jscs-trailing-comma.svg?branch=master)](https://travis-ci.org/EE/jscs-trailing-comma)
 [![Build status](https://ci.appveyor.com/api/projects/status/il0bikrr3sh3x8x3/branch/master?svg=true)](https://ci.appveyor.com/project/mzgol/jscs-trailing-comma/branch/master)
 
+## NOTE
+
+This module no longer define rules `disallowTrailingComma` & `requireTrailingComma` as rules named this way and covering most of their functionality are now included in JSCS. If you need to apply different logic to arrays and objects, you need to migrate configuration, for example the followint config:
+```js
+"requireTrailingComma": {
+    "inArrays": true,
+    "inObjects": false
+}
+```
+would need to be changed to:
+```js
+"requireTrailingCommaInCollapsedLiterals": {
+    "inArrays": true,
+    "inObjects": false
+}
+"requireTrailingCommaInExpandedLiterals": {
+    "inArrays": true,
+    "inObjects": false
+}
+```
+
 ## Getting Started
 
 To install the module, invoke:
