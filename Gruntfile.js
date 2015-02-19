@@ -1,11 +1,3 @@
-/**
- * jscs-trailing-comma
- * https://github.com/EE/jscs-trailing-comma
- *
- * Author Michał Gołębiowski <m.goleb@gmail.com>
- * Licensed under the MIT license.
- */
-
 'use strict';
 
 module.exports = function (grunt) {
