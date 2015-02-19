@@ -14,8 +14,7 @@
     "style"
   ],
   "files": [
-    "rules",
-    "common"
+    "lib"
   ],
   "main": "lib/index.js",
   "repository": {
