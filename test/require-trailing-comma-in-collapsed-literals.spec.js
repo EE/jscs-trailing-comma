@@ -7,7 +7,8 @@ describe('rules/require-trailing-comma-in-collapsed-literals', function () {
     var checkerContainer = {};
     beforeEach(function () {
         checkerContainer.checker = new Checker();
-        checkerContainer.checker.registerRule(new (require('../rules/require-trailing-comma-in-collapsed-literals'))());
+        checkerContainer.checker.registerRule(
+            new (require('../lib/rules/require-trailing-comma-in-collapsed-literals'))());
     });
 
     describe('rule set to `true`', function () {

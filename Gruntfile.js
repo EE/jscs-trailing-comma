@@ -16,7 +16,7 @@ module.exports = function (grunt) {
             all: {
                 src: [
                     'Gruntfile.js',
-                    'rules',
+                    'lib',
                     'test',
                 ],
             },
@@ -26,7 +26,7 @@ module.exports = function (grunt) {
             all: {
                 src: [
                     'Gruntfile.js',
-                    'rules/**/*.js',
+                    'lib/**/*.js',
                     'test/**/*.js',
                 ],
                 options: {
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
     });
 
     // Actually load this plugin's task(s).
-    grunt.loadTasks('rules');
+    grunt.loadTasks('lib/rules');
 
     // Load all grunt rules matching the `grunt-*` pattern.
     require('load-grunt-tasks')(grunt);

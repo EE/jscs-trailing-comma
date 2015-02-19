@@ -7,7 +7,8 @@ describe('rules/require-trailing-comma-in-expanded-literals', function () {
     var checkerContainer = {};
     beforeEach(function () {
         checkerContainer.checker = new Checker();
-        checkerContainer.checker.registerRule(new (require('../rules/require-trailing-comma-in-expanded-literals'))());
+        checkerContainer.checker.registerRule(
+            new (require('../lib/rules/require-trailing-comma-in-expanded-literals'))());
     });
 
     describe('rule set to `true`', function () {

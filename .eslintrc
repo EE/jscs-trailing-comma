@@ -9,7 +9,6 @@
         // Possible errors
         "no-comma-dangle": 0,
         "no-console": 0,
-        "no-extra-parens": 2,
 
         // Best practices
         "block-scoped-var": 2,
@@ -21,6 +20,7 @@
 
         // Variables
         "no-use-before-define": 0,
+        "no-shadow": 0,
 
         // Node.js
         "no-mixed-requires": 0,
