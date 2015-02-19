@@ -47,7 +47,7 @@ This module defines 4 tasks to be passed to JSCS. See the [JSCS](npmjs.org/packa
 To be able to use rules from this module, add the following to your JSCS configuration file:
 
 ```js
-"additionalRules": ["node_modules/jscs-trailing-comma/rules/*.js"]
+"plugin": ["jscs-trailing-comma"]
 ```
 
 Rules from this module work on a distinction between expanded and collapsed literals. Expanded literals are multi-line, with closing brackets in a separate line. Collapsed literal are either single-line or multi-line but without closing brackets in a separate line. You can think of collapsed literals as single-line with optional line breaks when the line is too long. They're more similar to single-line literals than expanded literals.

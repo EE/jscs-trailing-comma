@@ -38,9 +38,6 @@ module.exports = function (grunt) {
         },
     });
 
-    // Actually load this plugin's task(s).
-    grunt.loadTasks('lib/rules');
-
     // Load all grunt rules matching the `grunt-*` pattern.
     require('load-grunt-tasks')(grunt);
 

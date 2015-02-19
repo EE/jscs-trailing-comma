@@ -58,7 +58,7 @@
         "node_modules/**"
     ],
 
-    "additionalRules": ["lib/rules/*.js"],
+    "plugins": ["./lib/index.js"],
 
     "requireTrailingCommaInExpandedLiterals": {
         "inArrays": true,

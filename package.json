@@ -17,7 +17,7 @@
     "rules",
     "common"
   ],
-  "main": "Gruntfile.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/EE/jscs-trailing-comma.git"
