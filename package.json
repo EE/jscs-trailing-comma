@@ -1,6 +1,6 @@
 {
   "name": "jscs-trailing-comma",
-  "version": "0.4.3",
+  "version": "0.4.4-pre",
   "description": "JSCS rules around trailing commas in object/array literals",
   "homepage": "https://github.com/EE/jscs-trailing-comma",
   "author": {
