@@ -240,5 +240,10 @@ var o1 = {key: "value",};
 var o2 = ["value",];
 ```
 
+## Supported Node.js versions
+This project aims to support all Node.js LTS versions in the "active" phase (see [LTS README](https://github.com/nodejs/LTS/blob/master/README.md) for more details) as well as the latest stable Node.js. Today that means Node.js 0.12 & 4.x.
+
+Because of the popularity of this package and Node.js 0.10, this version is temporarily supported as well (for now).
+
 ## License
 Copyright (c) 2014 Laboratorium EE. Licensed under the MIT license.
