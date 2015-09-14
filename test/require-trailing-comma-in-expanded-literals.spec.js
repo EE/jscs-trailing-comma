@@ -1,7 +1,7 @@
 'use strict';
 
-var Checker = require('jscs/lib/checker'),
-    testPatterns = require('./lib/test-patterns');
+var Checker = require('jscs/lib/checker');
+var testPatterns = require('./lib/test-patterns');
 
 describe('rules/require-trailing-comma-in-expanded-literals', function () {
     var checkerContainer = {};

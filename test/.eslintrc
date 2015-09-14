@@ -1,5 +1,15 @@
 {
     "env": {
         "mocha": true
+    },
+
+    "rules": {
+        // Rules are divided into sections from http://eslint.org/docs/rules/
+
+        // Best practices
+        "no-implicit-coercion": 0,
+
+        // Legacy
+        "max-len": 0
     }
 }
