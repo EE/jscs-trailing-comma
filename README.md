@@ -3,7 +3,7 @@
 > JSCS rules around trailing commas in object/array literals.
 
 [![Build Status](https://travis-ci.org/EE/jscs-trailing-comma.svg?branch=master)](https://travis-ci.org/EE/jscs-trailing-comma)
-[![Build status](https://ci.appveyor.com/api/projects/status/il0bikrr3sh3x8x3/branch/master?svg=true)](https://ci.appveyor.com/project/mzgol/jscs-trailing-comma/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/il0bikrr3sh3x8x3/branch/master?svg=true)](https://ci.appveyor.com/project/mgol/jscs-trailing-comma/branch/master)
 
 ## NOTE
 
