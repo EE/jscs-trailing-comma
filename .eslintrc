@@ -1,7 +1,7 @@
 {
     "root": true,
 
-    "extends": "mzgol",
+    "extends": "mgol",
 
     "env": {
         "node": true
