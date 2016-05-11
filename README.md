@@ -2,6 +2,8 @@
 
 > JSCS rules around trailing commas in object/array literals.
 
+**This plugin is deprecated. Use the rules: [requireTrailingComma](http://jscs.info/rule/requireTrailingComma) & [disallowTrailingComma](http://jscs.info/rule/disallowTrailingComma) or, even better, switch to [ESLint](http://eslint.org/)'s [comma-dangle](http://eslint.org/docs/rules/comma-dangle) rule as JSCS is deprecated now.**
+
 [![Build Status](https://travis-ci.org/EE/jscs-trailing-comma.svg?branch=master)](https://travis-ci.org/EE/jscs-trailing-comma)
 [![Build status](https://ci.appveyor.com/api/projects/status/il0bikrr3sh3x8x3/branch/master?svg=true)](https://ci.appveyor.com/project/mgol/jscs-trailing-comma/branch/master)
 
