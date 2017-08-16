@@ -4,7 +4,7 @@
   "description": "JSCS rules around trailing commas in object/array literals",
   "homepage": "https://github.com/EE/jscs-trailing-comma",
   "author": {
-    "name": "Michał Gołębiowski",
+    "name": "Michał Gołębiowski-Owczarek",
     "email": "m.goleb@gmail.com"
   },
   "keywords": [
