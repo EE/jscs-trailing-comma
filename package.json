@@ -24,20 +24,20 @@
   "bugs": "https://github.com/EE/jscs-trailing-comma/issues",
   "license": "MIT",
   "devDependencies": {
-    "eslint-config-mgol": "0.0.27",
+    "eslint-config-mgol": "0.0.40",
     "grunt": "1.0.1",
     "grunt-cli": "1.2.0",
-    "grunt-contrib-clean": "1.0.0",
-    "grunt-eslint": "19.0.0",
+    "grunt-contrib-clean": "1.1.0",
+    "grunt-eslint": "20.0.0",
     "grunt-jscs": "3.0.1",
-    "grunt-mocha-test": "0.12.7",
+    "grunt-mocha-test": "0.13.2",
     "jscs": "3.0.7",
     "load-grunt-tasks": "3.5.2",
-    "mocha": "3.0.2",
+    "mocha": "3.5.0",
     "time-grunt": "1.4.0"
   },
   "scripts": {
-    "test": "npm install grunt-jscs@2.8.0 && grunt --stack && npm install && grunt --stack"
+    "test": "npm install grunt-jscs@2.8.0 --no-save && grunt --stack && npm install && grunt --stack"
   },
   "engines": {
     "node": ">=0.12.7 <0.13 || >=4.1.1"
